@@ -150,7 +150,7 @@ def search(url):
         try:
             response = requests.get(url=url, headers=headers)
             jason_data = response.json()
-            for j in range(18):
+            for j in range(24):
                 video_url=jason_data['data']['result'][j]['arcurl']
                 video_url_list.append(video_url)
                 title = jason_data['data']['result'][j]['title'].replace('<em class="keyword">', '')
